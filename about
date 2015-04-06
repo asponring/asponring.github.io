@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>The Story Thus Far - Hi Andy!</title>
+  <title>About - Hi Andy!</title>
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -14,43 +14,41 @@
   
   
   
-  <link rel="shortcut icon" href="../assets/img/favicon.ico">
-  <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon-180x180.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon-192x192.png" sizes="192x192">
-  <link rel="icon" type="image/png" href="../assets/img/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="../assets/img/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="../assets/img/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="../assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/img/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="assets/img/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="assets/img/favicon-32x32.png" sizes="32x32">
   <meta name="msapplication-TileColor" content="#00a300">
   <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png">
   <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 
-  <link rel="stylesheet" type="text/css" href="../assets/css/uno.css?v=132f59a6f7" />
+  <link rel="stylesheet" type="text/css" href="assets/css/uno.css?v=132f59a6f7" />
 
-  <link rel="canonical" href="http://andysponring.com/the-story-thus-far/" />
+  <link rel="canonical" href="http://andysponring.com/about/" />
     
     <meta property="og:site_name" content="Hi Andy!" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="The Story Thus Far" />
-    <meta property="og:description" content="Hey everyone! My name is Andy and I’m a product manager turned software engineer. For the last 5 years I&#x27;ve worked at various startups in the Silicon Valley, mostly doing social and mobile games. The next leg of my..." />
-    <meta property="og:url" content="http://andysponring.com/the-story-thus-far/" />
-    <meta property="og:image" content="http://andysponring.com/content/images/2015/04/Amazing-Austria---Imgur.jpg" />
-    <meta property="article:published_time" content="2015-03-20T17:14:30.247Z" />
-    <meta property="article:modified_time" content="2015-04-06T05:27:10.009Z" />
+    <meta property="og:title" content="About" />
+    <meta property="og:description" content="Hi, I&#x27;m Andy Sponring...." />
+    <meta property="og:url" content="http://andysponring.com/about/" />
+    <meta property="article:published_time" content="2015-04-06T05:24:26.982Z" />
+    <meta property="article:modified_time" content="2015-04-06T05:24:26.981Z" />
     
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="The Story Thus Far" />
-    <meta name="twitter:description" content="Hey everyone! My name is Andy and I’m a product manager turned software engineer. For the last 5 years I&#x27;ve worked at various startups in the Silicon Valley, mostly doing social and mobile games. The next leg of my..." />
-    <meta name="twitter:url" content="http://andysponring.com/the-story-thus-far/" />
-    <meta name="twitter:image:src" content="http://andysponring.com/content/images/2015/04/Amazing-Austria---Imgur.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="About" />
+    <meta name="twitter:description" content="Hi, I&#x27;m Andy Sponring...." />
+    <meta name="twitter:url" content="http://andysponring.com/about/" />
     
     <script type="application/ld+json">
 {
@@ -63,12 +61,11 @@
         "url": "http://andysponring.com/author/andy",
         "sameAs": null
     },
-    "headline": "The Story Thus Far",
-    "url": "http://andysponring.com/the-story-thus-far/",
-    "datePublished": "2015-03-20T17:14:30.247Z",
-    "dateModified": "2015-04-06T05:27:10.009Z",
-    "image": "http://andysponring.com/content/images/2015/04/Amazing-Austria---Imgur.jpg",
-    "description": "Hey everyone! My name is Andy and I’m a product manager turned software engineer. For the last 5 years I&#x27;ve worked at various startups in the Silicon Valley, mostly doing social and mobile games. The next leg of my..."
+    "headline": "About",
+    "url": "http://andysponring.com/about/",
+    "datePublished": "2015-04-06T05:24:26.982Z",
+    "dateModified": "2015-04-06T05:24:26.981Z",
+    "description": "Hi, I&#x27;m Andy Sponring...."
 }
     </script>
 
@@ -76,7 +73,7 @@
     <link rel="alternate" type="application/rss+xml" title="Hi Andy!" href="http://andysponring.com/rss/" />
 
 </head>
-<body class="post-template">
+<body class="post-template page-template page">
 
   <section id="cover-button" class="collapsed">
     <a><i class="icon icon-list"></i></a>
@@ -87,7 +84,7 @@
     <div class="cover container">
       <div class="profile">
         <a id="avatar-link" title="link to homepage for Hi Andy!" href="http://andysponring.com/#open">
-          <img src="../content/images/2015/04/AndyJarrie-256-lowres-copy.jpg" alt="Hi Andy! avatar" class="profile avatar hvr-buzz-out" />
+          <img src="content/images/2015/04/AndyJarrie-256-lowres-copy.jpg" alt="Hi Andy! avatar" class="profile avatar hvr-buzz-out" />
           <h1>Hi Andy!</h1>
           <h3 id="profile-resume">Software Engineer</h3>
         </a>
@@ -100,8 +97,8 @@
             <nav class="navigation left">
               <ul class="links">
                 <li class="links item">
-                  <a href="../index.html#open" class="link-item" title="link to Hi Andy! blog" id="blog-button">Blog</a>
-                  <a href="../about" class="link-item" title="" id="tags-button">About</a>
+                  <a href="index.html#open" class="link-item" title="link to Hi Andy! blog" id="blog-button">Blog</a>
+                  <a href="about" class="link-item" title="" id="tags-button">About</a>
                   <a href="mailto:asponring@gmail.com?subject=Hi Andy!" class="link-item" title="" id="contact-button">Contact</a>
                 </li>
               </ul>
@@ -137,7 +134,7 @@
             
               <!-- RSS -->
               <li class="social item hvr-grow-rotate">
-                <a href="../rss/index.html" title="Subscribe to RSS">
+                <a href="rss/index.html" title="Subscribe to RSS">
                   <i class='icon icon-rss'></i>
                   <span class="label">RSS</span>
                 </a>
@@ -162,36 +159,23 @@
     <section class="content">
       
 
-  <article class="post">
+  <article class="post page">
     <header>
       <a id="back-button" class="btn small square" href="javascript:history.back()">« Back</a>
       <div class="post meta">
-        <time datetime="20 Mar 2015">20 Mar 2015</time>
+        <time datetime="05 Apr 2015">05 Apr 2015</time>
         <span class="post tags"></span>
         <span class="post reading-time"> – <span></span> read.</span>
       </div>
 
-      <a href="https://twitter.com/intent/tweet?url=http://andysponring.com/the-story-thus-far/;text=The Story Thus Far » " alt="Tweet 'The Story Thus Far'" target="_blank">
-        <img id="post-image" src="../content/images/2015/04/Amazing-Austria---Imgur.jpg" alt="The Story Thus Far">
-        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">The Story Thus Far.</h1>
+      <a href="https://twitter.com/intent/tweet?url=http://andysponring.com/about/;text=About » " alt="Tweet 'About'" target="_blank">
+        
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">About.</h1>
       </a>
     </header>
 
-    <section class="post">
-      <p>Hey everyone! My name is Andy and I’m a product manager turned software engineer. For the last 5 years I've worked at various startups in the Silicon Valley, mostly doing social and mobile games.</p>
-
-<p>The next leg of my journey is a 12 week immersive program called <a href="http://www.hackreactor.com">Hack Reactor</a>. Staring March 23, I’ll be there 6 days a week for 12 hours a day, learning full-stack web development, algorithms, data structures, and a bunch of other fun, useful stuff. </p>
-
-<p>Here’s my story in a few bullets:</p>
-
-<ul>
-<li>Bay Area native (grew up in Mountain View, CA)</li>
-<li>Graduated UC Berkeley in 2007</li>
-<li>Joined a startup called Playdom in 2008 as one of the first 10 employees</li>
-<li>Playdom was acquired by Disney in 2010</li>
-<li>Left Disney in 2012 and then worked for a couple startups</li>
-<li>Got married to the love of my life just a few months ago!</li>
-</ul>
+    <section class="post page">
+      <p>Hi, I'm Andy Sponring.</p>
     </section>
 
   </article>
@@ -221,8 +205,8 @@
     </section>
   </article>
 
-  <script src="../public/jquery.js?v=132f59a6f7"></script>
-  <script type="text/javascript" src="../assets/js/uno.js?v=132f59a6f7"></script>
+  <script src="public/jquery.js?v=132f59a6f7"></script>
+  <script type="text/javascript" src="assets/js/uno.js?v=132f59a6f7"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
