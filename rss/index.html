@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hi Andy!]]></title><description><![CDATA[Software Engineer & Product Manager]]></description><link>http://andysponring.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Thu, 09 Apr 2015 22:16:29 GMT</lastBuildDate><atom:link href="http://andysponring.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[About Ghost]]></title><description><![CDATA[<p>This blog is made with <a href="https://ghost.org/">Ghost</a>, an open source blogging platform. All the hosting is done (for free!) through GitHub Pages.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hi Andy!]]></title><description><![CDATA[Software Engineer & Product Manager]]></description><link>http://andysponring.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Thu, 16 Apr 2015 21:49:11 GMT</lastBuildDate><atom:link href="http://andysponring.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Using Github Pages to host your blog (for free!)]]></title><description><![CDATA[<p><em>(Note: at the bottom of this page I added additional information on how to update your blog and how to add static pages to your blog.)</em></p>
+
+<p>When I downloaded <a href="https://ghost.org/">Ghost</a>, all I got were the raw files that scaffold out a blog. But hosting and serving up the blog content was left up to me, the user. </p>
+
+<p>In this short post I just want to call out 2 helpful guides I used to make this blog possible. After reading these posts I was convinced that hosting the blog on Github pages was the best option for me. The two main advantages for me were:</p>
+
+<ol>
+<li>It's free!  </li>
+<li>Pushing updates was as simple as doing a git push to my GitHub Page repository.</li>
+</ol>
+
+<p>To get started yourself read the 2 following posts (in order - the first one will at some point direct you to the 2nd one for further instructions):</p>
+
+<ol>
+<li><a href="http://irruncibly.so/how-to-make-a-blog-for-free/">How to make a blog for free</a> - written by a fellow Hack Reactor student  </li>
+<li><a href="http://ledtechnica.com/free-ghost-hosting-on-github-pages/">Free Ghost Hosting on Github Pages</a></li>
+</ol>
+
+<p>While these guides taken together are really robust, I wanted to make two addenda. I advise reading the following only after you've gone through the guides above.</p>
+
+<h3 id="howtoupdateyourblog">How to update your blog</h3>
+
+<p>You'll probably want to push new posts live regularly. Here's how:</p>
+
+<ol>
+<li>Publish your new post or site changes to localhost.  </li>
+<li>From the command line, <strong>cd</strong> into the directory that contains your "static" folder  </li>
+<li>Again run <strong>buster generate --domain=<a href="http://127.0.0.1:2368">http://127.0.0.1:2368</a></strong>. Do NOT run this command from inside the "static" folder, as that will create yet ANOTHER static folder inside there (I made this mistake)  </li>
+<li>Now <strong>cd</strong> into "static" and <strong>git commit</strong> and push up your changes to GitHub. The changes should be online shortly.</li>
+</ol>
+
+<h3 id="howtoaddstaticpages">How to add static pages</h3>
+
+<p>You might already have added one or two static pages to your site. For instance, clicking <a href="http://andysponring.com/about">About</a> on that sidebar will take you to one. You can create these in ghost by clicking the settings icon next to "Save Draft" when authoring a post, then selecting "Turn this post into a static page".</p>
+
+<p><img src="http://andysponring.com/content/images/2015/04/" alt="How to create a static page"></p>
+
+<p>The Buster tool that is referenced in the how-to guides doesn't play nice with static pages unfortunately. It will add them to your static folder without the ".html" extension, causing them not to appear when linked to in your live blog.</p>
+
+<p><strong>Solution:</strong> after running <strong>buster generate --domain=<a href="http://127.0.0.1:2368">http://127.0.0.1:2368</a></strong>, look for the file containing your static page in the "static" folder. Add ".html" to the filename, <strong>and also make sure to delete an older version of the page</strong> if there is one. Once you change the file extension, Buster doesn't recognize it anymore and generates a new version of the static page each time, rather than merging changes with the previous version.</p>
+
+<p>Note: you'll only need to follow the above steps after you either added a new static page or modified an existing one.</p>
+
+<p>Once you've added the file extension and deleted the old version, you're all set and can push the changes to GitHub!</p>]]></description><link>http://andysponring.com/using-github-pages-to-host-your-blog-for-free/</link><guid isPermaLink="false">240bf4f3-0c14-4b34-846b-da3573640916</guid><dc:creator><![CDATA[Andy Sponring]]></dc:creator><pubDate>Thu, 16 Apr 2015 21:27:35 GMT</pubDate></item><item><title><![CDATA[About Ghost]]></title><description><![CDATA[<p>This blog is made with <a href="https://ghost.org/">Ghost</a>, an open source blogging platform. All the hosting is done (for free!) through GitHub Pages.</p>
 
 <p>There was some discussion amongst my Hack Reactor cohort-mates as to which platform was best for building a blog. Honestly, before my programmer days, setting up a blog (to me) seemed like a very simple task. Dozens of free services exist, like Wordpress, Blogger, or Tumblr. So I was surprised that most of my classmates chose Ghost. </p>
 
