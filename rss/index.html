@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hi Andy!]]></title><description><![CDATA[Software Engineer & Product Manager]]></description><link>http://andysponring.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Sat, 09 May 2015 04:04:25 GMT</lastBuildDate><atom:link href="http://andysponring.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[What is a product manager?]]></title><description><![CDATA[<p>As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM does and how they interact with engineers. <a href="https://docs.google.com/presentation/d/1qLnRhF6zI03plrELM3ejl2hI-zclg9SufoShUjqugS0/edit?usp=sharing">You can find that presentation here.</a></p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Hi Andy!]]></title><description><![CDATA[Software Engineer & Product Manager]]></description><link>http://andysponring.com/</link><generator>Ghost 0.5</generator><lastBuildDate>Tue, 19 May 2015 02:34:33 GMT</lastBuildDate><atom:link href="http://andysponring.com/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[A Bitwise Solution to Power Set]]></title><description><![CDATA[<p>The power set of a set S, <a href="http://mathworld.wolfram.com/PowerSet.html">according to Wolfram MathWorld</a>, is the set of all subsets of S. The formal definition requires that the empty set as well as S itself be included in the power set.</p>
+
+<p>As a part of an exercise the other week, I wrote an algorithm for finding power set, where the input was actually a string and the output was an array of strings containing subsets of the characters in the input string (so the input string "abc" would yield [ '' , 'a', 'b', 'c', 'ab', 'ac', 'bc', 'abc' ]). While my solution followed a common pattern for finding subset, it wasn't until I learned a little more about set theory that I discovered a completely different approach that is quite interesting. I wanted to share this approach and a modified algorithm in this blog post.</p>
+
+<p>The first and more straightforward algorithm that I employed looks like this (pseudocode):</p>
+
+<pre><code>Given set S as input  
+Let C be a collection which will contain our power set  
+Add the empty set to C  
+For element x in S  
+    For set y in C
+        Add the set y + x to C
+</code></pre>
+
+<p>While this algo works perfectly fine, the solution I'm about to describe using binary numbers may prove more pedagogically useful as it gives a deeper understanding of power set.</p>
+
+<p>Let's say the string "abc" is our input. We can think of "abc" as a number in base 2, where each digit is set to 1.</p>
+
+<pre><code>a b c  
+1 1 1  
+</code></pre>
+
+<p>When we create a subset of "abc" what we are really doing is switching one or more digits of that number to 0. Switching a digit to 0 is akin to removing that element from the set. Here's a couple examples:</p>
+
+<pre><code>a b c  
+1 0 1  
+=&gt; "ac"
+
+a b c  
+0 1 1  
+=&gt; "bc"
+</code></pre>
+
+<p>So the act of producing a power set can be thought of counting from 0 until 2^n - 1, where n is the number of elements in the input set. Why is this? Firstly, imagine that we are counting in binary. Starting at 0, no elements of set S will be included. In other words, this is the empty set.</p>
+
+<pre><code>a b c  
+0 0 0  
+=&gt; ""
+</code></pre>
+
+<p>As we count upwards, we will naturally go through all the combinations of zeroes and ones until all digits equal 1, translating into the original set itself. For a set of 3, the final binary number will be "111", or 2^n - 1. At this point, counting the empty set, we have 8 elements, or 2^n. </p>
+
+<p>It so happens that, by definition, the power set of set S with n elements is exactly 2^n (hence the term "<em>power</em> set").</p>
+
+<p>I decided to start from scratch and write an algorithm that uses bitwise operations to calculate power set. I chose to write it in Java since Java's bitwise operations are close to the hardware and faster than in, say, <a href="http://archive.oreilly.com/pub/a/javascript/excerpts/javascript-good-parts/bad-parts.html">JavaScript</a>.</p>
+
+<pre><code>import java.util.Arrays;  
+import java.lang.Math;
+
+public class PowerSet  
+{
+   public static void main(String[] args)
+   {
+      System.out.println(Arrays.toString(findPowerSet("abc")));
+      System.out.println(Arrays.toString(findPowerSet("power")));
+   }
+
+   public static String[] findPowerSet(String input)
+   {
+      // Assume the input has no duplicate characters for simplicity
+      int inputLength = input.length();
+      int powerSetSize = (int)Math.pow(2, inputLength);
+      String[] result = new String[powerSetSize];
+
+      for (int k = 0; k &lt; powerSetSize; k++) 
+      {
+         String set = "";
+         int binaryDigits = k;
+         for (int j = 0; j &lt; inputLength; j++)
+         {
+            if (binaryDigits % 2 == 1)
+               set += input.charAt(j);
+            binaryDigits &gt;&gt;= 1;
+         }
+         result[k] = set;
+      }
+
+      return result;
+   }
+}
+
+/* console output:
+ * [, a, b, ab, c, ac, bc, abc]
+ * [, p, o, po, w, pw, ow, pow, e, pe, oe, poe, we, pwe, owe, powe, r, pr, or, por, wr, pwr, owr, powr, er, per, oer, poer, wer, pwer, ower, power]
+ */
+</code></pre>
+
+<p>As you can see, the results are exactly as expected.</p>
+
+<p>One drawback of this new algorithm is its slower run time compared with the original. Whereas my first algo had a time complexity of O(2^n), the new algorithm has O(n * 2^n). The difference comes from how many times we iterate. In the first algo we only needed as many iterations as there were elements in the power set. In the second implementation, I have an outer loop counting from 0 to 2^n, and an inner loop within that going from 0 to n (or O(n) time complexity). The inner loop is necessary to find out each binary digit within the current iteration count. This latter operation is done using the right bitshift operator (">>"), which if you don't know about, <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html">you should totally read up on</a> because it's awesome. Basically, the bitshift allows me to go through each digit of a binary number and test if that digit is 0 or 1 (using modulo 2).</p>
+
+<p>By the way, in case you were wondering (and I was), O(n * 2^n) does NOT reduce to O(2^n). If you're interested in an explanation, check out <a href="http://stackoverflow.com/questions/21764861/are-2n-and-n2n-in-the-same-time-complexity">this Stack Overflow question</a>.</p>]]></description><link>http://andysponring.com/a-bitwise-solution-to-power-set/</link><guid isPermaLink="false">a90c75a6-3940-40e3-ba76-0a19847626ac</guid><dc:creator><![CDATA[Andy Sponring]]></dc:creator><pubDate>Mon, 18 May 2015 04:51:48 GMT</pubDate></item><item><title><![CDATA[What is a product manager?]]></title><description><![CDATA[<p>As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM does and how they interact with engineers. <a href="https://docs.google.com/presentation/d/1qLnRhF6zI03plrELM3ejl2hI-zclg9SufoShUjqugS0/edit?usp=sharing">You can find that presentation here.</a></p>
 
 <p>A number of classmates told me they found the presentation valuable so I thought I'd go over some of it here. I feel it's especially valuable for someone new to the tech industry, as there's not a lot of general knowledge about what a PM is.</p>
 

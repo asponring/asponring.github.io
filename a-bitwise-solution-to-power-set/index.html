@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>What is a product manager? - Hi Andy!</title>
+  <title>A Bitwise Solution to Power Set - Hi Andy!</title>
 
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -35,20 +35,20 @@
 
   <link rel="stylesheet" type="text/css" href="../assets/css/uno.css?v=f1639705f9" />
 
-  <link rel="canonical" href="http://andysponring.com/what-is-a-product-manager/" />
+  <link rel="canonical" href="http://andysponring.com/a-bitwise-solution-to-power-set/" />
     
     <meta property="og:site_name" content="Hi Andy!" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="What is a product manager?" />
-    <meta property="og:description" content="As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM..." />
-    <meta property="og:url" content="http://andysponring.com/what-is-a-product-manager/" />
-    <meta property="article:published_time" content="2015-05-01T21:08:21.206Z" />
-    <meta property="article:modified_time" content="2015-05-09T04:03:53.894Z" />
+    <meta property="og:title" content="A Bitwise Solution to Power Set" />
+    <meta property="og:description" content="The power set of a set S, according to Wolfram MathWorld, is the set of all subsets of S. The formal definition requires that the empty set as well as S itself be included in the power set. As a..." />
+    <meta property="og:url" content="http://andysponring.com/a-bitwise-solution-to-power-set/" />
+    <meta property="article:published_time" content="2015-05-18T04:51:48.232Z" />
+    <meta property="article:modified_time" content="2015-05-18T20:19:40.744Z" />
     
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="What is a product manager?" />
-    <meta name="twitter:description" content="As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM..." />
-    <meta name="twitter:url" content="http://andysponring.com/what-is-a-product-manager/" />
+    <meta name="twitter:title" content="A Bitwise Solution to Power Set" />
+    <meta name="twitter:description" content="The power set of a set S, according to Wolfram MathWorld, is the set of all subsets of S. The formal definition requires that the empty set as well as S itself be included in the power set. As a..." />
+    <meta name="twitter:url" content="http://andysponring.com/a-bitwise-solution-to-power-set/" />
     
     <script type="application/ld+json">
 {
@@ -61,11 +61,11 @@
         "url": "http://andysponring.com/author/andy",
         "sameAs": null
     },
-    "headline": "What is a product manager?",
-    "url": "http://andysponring.com/what-is-a-product-manager/",
-    "datePublished": "2015-05-01T21:08:21.206Z",
-    "dateModified": "2015-05-09T04:03:53.894Z",
-    "description": "As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM..."
+    "headline": "A Bitwise Solution to Power Set",
+    "url": "http://andysponring.com/a-bitwise-solution-to-power-set/",
+    "datePublished": "2015-05-18T04:51:48.232Z",
+    "dateModified": "2015-05-18T20:19:40.744Z",
+    "description": "The power set of a set S, according to Wolfram MathWorld, is the set of all subsets of S. The formal definition requires that the empty set as well as S itself be included in the power set. As a..."
 }
     </script>
 
@@ -163,48 +163,110 @@
     <header>
       <a id="back-button" class="btn small square" href="javascript:history.back()">« Back</a>
       <div class="post meta">
-        <time datetime="01 May 2015">01 May 2015</time>
+        <time datetime="17 May 2015">17 May 2015</time>
         <span class="post tags"></span>
         <span class="post reading-time"> – <span></span> read.</span>
       </div>
 
-      <a href="https://twitter.com/intent/tweet?url=http://andysponring.com/what-is-a-product-manager/;text=What is a product manager? » " alt="Tweet 'What is a product manager?'" target="_blank">
+      <a href="https://twitter.com/intent/tweet?url=http://andysponring.com/a-bitwise-solution-to-power-set/;text=A Bitwise Solution to Power Set » " alt="Tweet 'A Bitwise Solution to Power Set'" target="_blank">
         
-        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">What is a product manager?</h1>
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">A Bitwise Solution to Power Set.</h1>
       </a>
     </header>
 
     <section class="post">
-      <p>As I mentioned in my earlier posts, I had been a product manager for many years before deciding to pursue engineering. A few weeks ago at Hack Reactor, I gave a short presentation to my classmates about what a PM does and how they interact with engineers. <a href="https://docs.google.com/presentation/d/1qLnRhF6zI03plrELM3ejl2hI-zclg9SufoShUjqugS0/edit?usp=sharing">You can find that presentation here.</a></p>
+      <p>The power set of a set S, <a href="http://mathworld.wolfram.com/PowerSet.html">according to Wolfram MathWorld</a>, is the set of all subsets of S. The formal definition requires that the empty set as well as S itself be included in the power set.</p>
 
-<p>A number of classmates told me they found the presentation valuable so I thought I'd go over some of it here. I feel it's especially valuable for someone new to the tech industry, as there's not a lot of general knowledge about what a PM is.</p>
+<p>As a part of an exercise the other week, I wrote an algorithm for finding power set, where the input was actually a string and the output was an array of strings containing subsets of the characters in the input string (so the input string "abc" would yield [ '' , 'a', 'b', 'c', 'ab', 'ac', 'bc', 'abc' ]). While my solution followed a common pattern for finding subset, it wasn't until I learned a little more about set theory that I discovered a completely different approach that is quite interesting. I wanted to share this approach and a modified algorithm in this blog post.</p>
 
-<p>My definition of a product manager (and this definition is shaped by my 5+ years in the industry rather than formal education in it) is that a PM is the person who defines the features of a product and drives their development. Ultimately, a PM's thought process can be summarized in the Venn diagram below. The PM has to approach his product from 3 different but overlapping perspectives: those of the customer, the technology, and the business.</p>
+<p>The first and more straightforward algorithm that I employed looks like this (pseudocode):</p>
 
-<p><img src="http://andysponring.com/content/images/2015/05/pm-questions.png" alt="Questions a PM must ask" /></p>
+<pre><code>Given set S as input  
+Let C be a collection which will contain our power set  
+Add the empty set to C  
+For element x in S  
+    For set y in C
+        Add the set y + x to C
+</code></pre>
 
-<p>Along with those perspectives come the key questions:</p>
+<p>While this algo works perfectly fine, the solution I'm about to describe using binary numbers may prove more pedagogically useful as it gives a deeper understanding of power set.</p>
 
-<ul>
-<li><strong>Customer perspective:</strong> What should we build? (Or for an existing product: how do we make customers love our product even more?)</li>
-<li><strong>Technology perspective:</strong> How do we build it?</li>
-<li><strong>Business perspective:</strong> How do we measure its success? ("Money" is the most common answer, but not always.)</li>
-</ul>
+<p>Let's say the string "abc" is our input. We can think of "abc" as a number in base 2, where each digit is set to 1.</p>
 
-<p>One point I didn't cover in the slides is that PMs are involved in the entire lifecycle of a product. In my experience, the PM's involvement at each step has been this:</p>
+<pre><code>a b c  
+1 1 1  
+</code></pre>
 
-<ol>
-<li>Requirements gathering - researching customer needs, assessing market conditions (what are competitors doing?). Then synthesizing these learnings into a concrete product plan - how will this product address the customers' problems?  </li>
-<li>Defining metrics for success - is it a certain amount of daily revenue? daily active users? retetion? Will users be more likely to invite their friends to the product afterward?  </li>
-<li>Sprint planning - sitting with engineers, going over requirements, and getting time estimates for each item. Drawing up a realistic schedule while pushing hard if need be to ship earlier  </li>
-<li>Answering questions and resolving blockers for engineers during sprint  </li>
-<li>Final review and go-ahead for any product or product feature before it's shipped  </li>
-<li>Reviewing product performance and determining if metrics for success were met</li>
-</ol>
+<p>When we create a subset of "abc" what we are really doing is switching one or more digits of that number to 0. Switching a digit to 0 is akin to removing that element from the set. Here's a couple examples:</p>
 
-<p>Ideally all these steps can be completed in as short of a time frame as possible and the process can start all over with the learnings from the last development cycle. Often, things will happen in parallel. While engineers are actively developing a feature I defined, I'll be hard at work analyzing the metrics for a feature we previously shipped and drawing up a product plan for what we'll do in the next sprint. </p>
+<pre><code>a b c  
+1 0 1  
+=&gt; "ac"
 
-<p>There's much more I could discuss but I think what I described here and in my slides gives some insight into what I used to do. In future posts I plan to cover practical tips for how engineers can deal with their PMs and as well as my thoughts on whether you should pursue product management as a career.</p>
+a b c  
+0 1 1  
+=&gt; "bc"
+</code></pre>
+
+<p>So the act of producing a power set can be thought of counting from 0 until 2^n - 1, where n is the number of elements in the input set. Why is this? Firstly, imagine that we are counting in binary. Starting at 0, no elements of set S will be included. In other words, this is the empty set.</p>
+
+<pre><code>a b c  
+0 0 0  
+=&gt; ""
+</code></pre>
+
+<p>As we count upwards, we will naturally go through all the combinations of zeroes and ones until all digits equal 1, translating into the original set itself. For a set of 3, the final binary number will be "111", or 2^n - 1. At this point, counting the empty set, we have 8 elements, or 2^n. </p>
+
+<p>It so happens that, by definition, the power set of set S with n elements is exactly 2^n (hence the term "<em>power</em> set").</p>
+
+<p>I decided to start from scratch and write an algorithm that uses bitwise operations to calculate power set. I chose to write it in Java since Java's bitwise operations are close to the hardware and faster than in, say, <a href="http://archive.oreilly.com/pub/a/javascript/excerpts/javascript-good-parts/bad-parts.html">JavaScript</a>.</p>
+
+<pre><code>import java.util.Arrays;  
+import java.lang.Math;
+
+public class PowerSet  
+{
+   public static void main(String[] args)
+   {
+      System.out.println(Arrays.toString(findPowerSet("abc")));
+      System.out.println(Arrays.toString(findPowerSet("power")));
+   }
+
+   public static String[] findPowerSet(String input)
+   {
+      // Assume the input has no duplicate characters for simplicity
+      int inputLength = input.length();
+      int powerSetSize = (int)Math.pow(2, inputLength);
+      String[] result = new String[powerSetSize];
+
+      for (int k = 0; k &lt; powerSetSize; k++) 
+      {
+         String set = "";
+         int binaryDigits = k;
+         for (int j = 0; j &lt; inputLength; j++)
+         {
+            if (binaryDigits % 2 == 1)
+               set += input.charAt(j);
+            binaryDigits &gt;&gt;= 1;
+         }
+         result[k] = set;
+      }
+
+      return result;
+   }
+}
+
+/* console output:
+ * [, a, b, ab, c, ac, bc, abc]
+ * [, p, o, po, w, pw, ow, pow, e, pe, oe, poe, we, pwe, owe, powe, r, pr, or, por, wr, pwr, owr, powr, er, per, oer, poer, wer, pwer, ower, power]
+ */
+</code></pre>
+
+<p>As you can see, the results are exactly as expected.</p>
+
+<p>One drawback of this new algorithm is its slower run time compared with the original. Whereas my first algo had a time complexity of O(2^n), the new algorithm has O(n * 2^n). The difference comes from how many times we iterate. In the first algo we only needed as many iterations as there were elements in the power set. In the second implementation, I have an outer loop counting from 0 to 2^n, and an inner loop within that going from 0 to n (or O(n) time complexity). The inner loop is necessary to find out each binary digit within the current iteration count. This latter operation is done using the right bitshift operator (">>"), which if you don't know about, <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html">you should totally read up on</a> because it's awesome. Basically, the bitshift allows me to go through each digit of a binary number and test if that digit is 0 or 1 (using modulo 2).</p>
+
+<p>By the way, in case you were wondering (and I was), O(n * 2^n) does NOT reduce to O(2^n). If you're interested in an explanation, check out <a href="http://stackoverflow.com/questions/21764861/are-2n-and-n2n-in-the-same-time-complexity">this Stack Overflow question</a>.</p>
     </section>
 
   </article>
